@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Your idea Grid</title>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000000;
+      color: white; /* Added font color */
+    }
+    .grid {
+      column-count: 4;
+      column-gap: 1em;
+      padding: 20px;
+    }
+    .card {
+      background: rgb(5, 5, 5);
+      margin: 0 0 1em;
+      padding: 10px;
+      display: inline-block;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .card p {
+      text-align: center;
+      margin-top: 10px;
+    }
+    @media (max-width: 768px) {
+      .grid {
+        column-count: 2;
+      }
+    }
+    @media (max-width: 480px) {
+      .grid {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="grid">
+<div class="card">
+<a download="" href="https://i.postimg.cc/Wzk235kf/conor-mcgregor-wallpaper.jpg">
+<img alt="Image 1" src="https://i.postimg.cc/Wzk235kf/conor-mcgregor-wallpaper.jpg"/>
+</a>
+<p>conor mcgregor wallpaper</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/Y9cLMDjj/Reverie.jpg">
+<img alt="Image 2" src="https://i.postimg.cc/Y9cLMDjj/Reverie.jpg"/>
+</a>
+<p>Reverie | Rockstar</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/MKscvpXC/John-wick.jpg">
+<img alt="Image 3" src="https://i.postimg.cc/MKscvpXC/John-wick.jpg"/>
+</a>
+<p>John wick</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/wBY9BCcK/HIT-3.jpg">
+<img alt="Image 4" src="https://i.postimg.cc/wBY9BCcK/HIT-3.jpg"/>
+</a>
+<p>HIT 3</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/RZrk1c3K/Batman-pfp.jpg">
+<img alt="Image 5" src="https://i.postimg.cc/RZrk1c3K/Batman-pfp.jpg"/>
+</a>
+<p>Batman pfp</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/JzL17w5f/rajinikanth.jpg">
+<img alt="Image 6" src="https://i.postimg.cc/JzL17w5f/rajinikanth.jpg"/>
+</a>
+<p>Beer Jaganathan</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/1tfS7yyq/kamal-Hassan-in-Thuglife.jpg">
+<img alt="Image 7" src="https://i.postimg.cc/1tfS7yyq/kamal-Hassan-in-Thuglife.jpg"/>
+</a>
+<p>kamal Hassan in Thuglife</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/pXnfbjs0/itsyuvan-illayaraja-god-of-music-u1-dragon.jpg">
+<img alt="Image 8" src="https://i.postimg.cc/pXnfbjs0/itsyuvan-illayaraja-god-of-music-u1-dragon.jpg"/>
+</a>
+<p>kutty drogan</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/BZRhK4yV/download.jpg">
+<img alt="Image 9" src="https://i.postimg.cc/BZRhK4yV/download.jpg"/>
+</a>
+<p>mannipaaya</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/v8LnKNpm/96-1.jpg">
+<img alt="Image 10" src="https://i.postimg.cc/v8LnKNpm/96-1.jpg"/>
+</a>
+<p>"96",Is this really going to be my end...</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/sDVtXVhC/Meiyazhagan-Poster.jpg">
+<img alt="Image 11" src="https://i.postimg.cc/sDVtXVhC/Meiyazhagan-Poster.jpg"/>
+</a>
+<p>ATHAANNN...</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/X7zQb3K8/download-1.jpg">
+<img alt="Image 12" src="https://i.postimg.cc/X7zQb3K8/download-1.jpg"/>
+</a>
+<p>Azhagiye</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/RZCLGBh9/download-9.jpg">
+<img alt="Image 13" src="https://i.postimg.cc/RZCLGBh9/download-9.jpg"/>
+</a>
+<p>If i’m ever gonna fall in love, its always gonna be you</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/GprY0SfK/thalapathi.jpg">
+<img alt="Image 14" src="https://i.postimg.cc/GprY0SfK/thalapathi.jpg"/>
+</a>
+<p>thalapathi</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/bJFrC6bm/Hangover.jpg">
+<img alt="Image 15" src="https://i.postimg.cc/bJFrC6bm/Hangover.jpg"/>
+</a>
+<p>Hangover</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/8CNbNCYq/Nani.jpg">
+<img alt="Image 16" src="https://i.postimg.cc/8CNbNCYq/Nani.jpg"/>
+</a>
+<p>come lets count the stars my?</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/Jhx5nLVt/Me-and-who.jpg">
+<img alt="Image 17" src="https://i.postimg.cc/Jhx5nLVt/Me-and-who.jpg"/>
+</a>
+<p>Me and who?</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/B6vcPV4p/manidhan.jpg">
+<img alt="Image 18" src="https://i.postimg.cc/B6vcPV4p/manidhan.jpg"/>
+</a>
+<p>batman ayya nanu</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/9fmysnR2/download-2.jpg">
+<img alt="Image 19" src="https://i.postimg.cc/9fmysnR2/download-2.jpg"/>
+</a>
+<p>SHE:)</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/y6gFX33y/download-3.jpg">
+<img alt="Image 20" src="https://i.postimg.cc/y6gFX33y/download-3.jpg"/>
+</a>
+<p>Me and him before our breaking up</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/XqkNcgfv/Gwen-and-Peter.jpg">
+<img alt="Image 21" src="https://i.postimg.cc/XqkNcgfv/Gwen-and-Peter.jpg"/>
+</a>
+<p>Gwen and Peter</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/zGV5VNcv/download-4.jpg">
+<img alt="Image 22" src="https://i.postimg.cc/zGV5VNcv/download-4.jpg"/>
+</a>
+<p>I'll lose myself</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/k4CkFPfx/download-5.jpg">
+<img alt="Image 23" src="https://i.postimg.cc/k4CkFPfx/download-5.jpg"/>
+</a>
+<p>hey sita</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/ry0P0m8v/download-6.jpg">
+<img alt="Image 24" src="https://i.postimg.cc/ry0P0m8v/download-6.jpg"/>
+</a>
+<p>Privilege</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/q7vmkBbD/download-7.jpg">
+<img alt="Image 25" src="https://i.postimg.cc/q7vmkBbD/download-7.jpg"/>
+</a>
+<p>Jim and Pam</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/PrbKYv0F/percy-jackson-annabeth-chase-aesthetic-percabeth-pjo-hoo-rick-riordan.jpg">
+<img alt="Image 26" src="https://i.postimg.cc/PrbKYv0F/percy-jackson-annabeth-chase-aesthetic-percabeth-pjo-hoo-rick-riordan.jpg"/>
+</a>
+<p>DREAM</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/t425mQq3/download-8.jpg">
+<img alt="Image 27" src="https://i.postimg.cc/t425mQq3/download-8.jpg"/>
+</a>
+<p>Why ME?</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/02CdbRJT/image.jpg">
+<img alt="Image 28" src="https://i.postimg.cc/02CdbRJT/image.jpg"/>
+</a>
+<p>❤️</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/s2b5t3th/the-urge.jpg">
+<img alt="Image 29" src="https://i.postimg.cc/s2b5t3th/the-urge.jpg"/>
+</a>
+<p>the urge 🧿💘</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+<div class="card">
+<a download="" href="https://i.postimg.cc/KjHqW6rp/image.jpg">
+<img alt="Image 30" src="https://i.postimg.cc/KjHqW6rp/image.jpg"/>
+</a>
+<p>byebye</p>
+<div>
+<button class="like-btn" onclick="toggleLike(this)">♡ Like</button>
+<span>0</span>
+<div class="comment-section">
+<form onsubmit="addComment(event, this.parentElement)">
+<input placeholder="Add a comment..." type="text"/>
+<button type="submit">Post</button>
+</form>
+<ul class="comment-list"></ul>
+</div>
+</div></div>
+</div>
+
+<script>
+function toggleLike(btn) {
+  let countSpan = btn.nextElementSibling;
+  let count = parseInt(countSpan.textContent);
+  if (btn.classList.toggle('liked')) {
+    count++;
+    btn.textContent = '❤️ Liked';
+  } else {
+    count--;
+    btn.textContent = '♡ Like';
+  }
+  countSpan.textContent = count;
+}
+
+function addComment(event, container) {
+  event.preventDefault();
+  const input = container.querySelector('input');
+  const commentList = container.querySelector('.comment-list');
+  const comment = input.value.trim();
+  if (comment) {
+    const li = document.createElement('li');
+    li.textContent = comment;
+    commentList.appendChild(li);
+    input.value = '';
+  }
+}
+</script>
+<style>
+.like-btn {
+  background-color: #e60023;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+}
+.like-btn.liked {
+  background-color: #cc001f;
+}
+.comment-section {
+  margin-top: 10px;
+  padding: 10px;
+  background: #000000;
+  border-radius: 8px;
+}
+.comment-section input {
+  width: 80%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #000000;
+}
+.comment-section button {
+  padding: 6px 12px;
+  margin-left: 5px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+.comment-list {
+  margin-top: 8px;
+  list-style: none;
+  padding-left: 0;
+}
+.comment-list li {
+  background: rgb(0, 0, 0);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 2px;
+}
+</style>
+</body>
+</html>
